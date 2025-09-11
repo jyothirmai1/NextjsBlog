@@ -4,6 +4,8 @@ import { prisma } from "./utils/db";
 import BlogPostCard from "../../components/general/BlogPostCard";
 import { Suspense } from "react";
 
+export const revalidate = 7200; // Disable caching, always fetch fresh data
+
 export async function getData() {
   const items = await prisma.blogPost.findMany({
     select: {
