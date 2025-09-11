@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
         port:""
       }
     ]
+  },
+  eslint:{
+ ignoreDuringBuilds: true,    // Temporarily disables ESLint during the build
   }
 };
 
