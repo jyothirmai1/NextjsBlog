@@ -34,3 +34,35 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Install shadcn ui
+ -pnpm dlx shadcn@latest init
+
+## Install prisma
+- pnpm i -D prisma
+- pnpm i @prisma/client
+- pnpm dlx prisma init
+## Install prisma extension in vs code
+
+## go to Neon website and sign in with creds and create a project with default options and giving a project name,azure
+
+## click on connect database and select prisma in 3 row and select .env tab and copy the url and paste in project code .env file
+
+## Write the models in schema.prisma file and run the below cmd
+pnpm dlx prisma db push
+
+## To open prisma tables
+
+pnpm dlx prisma studio
+
+## Install Kinde for authentication
+
+pnpm i @kinde-oss/kinde-auth-nextjs
+
+sign in to Kinde and create a new project(it will say business)
+after the business is created click on the view details of project.goto quick start and follow steps
+
+https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/#install-for-a-new-project 
+put the env variables in .env
+
+create a auth provider file(AuthProvider.tsx) and wrap the app with <AuthProvider> in global layout.tsx
