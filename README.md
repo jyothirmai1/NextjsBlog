@@ -41,7 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Install Prisma (Use Prisma 6)
 - pnpm i -D prisma
 - pnpm i @prisma/client
-- pnpm prisma init
+- pnpm dlx prisma init
 ## Install Prisma extension in VS Code
 
 ## go to Neon website and sign in with creds and create a project with default options and give a project name, azure
@@ -49,7 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## click on connect database and select Prisma in the 3rd row, select .env tab, and copy the URL and paste it in the project code .env file
 
 ## Write the models in schema.prisma file and run the below cmd
-pnpm prisma db push
+pnpm dlx prisma db push
 
 ## To open prisma tables
 
