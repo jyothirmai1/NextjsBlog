@@ -38,31 +38,31 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Install shadcn ui
  -pnpm dlx shadcn@latest init
 
-## Install prisma
+## Install Prisma (Use Prisma 6)
 - pnpm i -D prisma
 - pnpm i @prisma/client
-- pnpm dlx prisma init
-## Install prisma extension in vs code
+- pnpm prisma init
+## Install Prisma extension in VS Code
 
-## go to Neon website and sign in with creds and create a project with default options and giving a project name,azure
+## go to Neon website and sign in with creds and create a project with default options and give a project name, azure
 
-## click on connect database and select prisma in 3 row and select .env tab and copy the url and paste in project code .env file
+## click on connect database and select Prisma in the 3rd row, select .env tab, and copy the URL and paste it in the project code .env file
 
 ## Write the models in schema.prisma file and run the below cmd
-pnpm dlx prisma db push
+pnpm prisma db push
 
 ## To open prisma tables
 
-pnpm dlx prisma studio
+pnpm prisma studio
 
 ## Install Kinde for authentication
 
 pnpm i @kinde-oss/kinde-auth-nextjs
 
-sign in to Kinde and create a new project(it will say business)
-after the business is created click on the view details of project.goto quick start and follow steps
+Sign in to Kinde and create a new project(it will say business)
+After the business is created, click View Details of the project. goto quick start and follow the steps
 
 https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/#install-for-a-new-project 
-put the env variables in .env
+Put the env variables in .env
 
 create a auth provider file(AuthProvider.tsx) and wrap the app with <AuthProvider> in global layout.tsx
