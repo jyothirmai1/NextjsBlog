@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
         hostname:"img.freepik.com",
         protocol:"https",
         port:""
+      },
+       {
+        hostname:"static.wixstatic.com",
+        protocol:"https",
+        port:""
+      },
+      {
+        hostname:"images.unsplash.com",
+        protocol:"https",
+        port:""
       }
     ]
   },

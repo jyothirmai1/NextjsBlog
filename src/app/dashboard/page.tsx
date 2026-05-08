@@ -30,8 +30,8 @@ if(!user){
   return (
     <div>
     <div className=' flex justify-between items-center py-4'>
-      <div className='font-medium text-2xl text-emerald-700'>Your Blog Articles</div>
-      <Link  className={buttonVariants({variant:'secondary'})} href={"/dashboard/create"}>
+      <div className='font-medium text-2xl text-[#24899f]'>Your Blog Articles</div>
+      <Link  className={buttonVariants({variant:'secondary'})} style={{backgroundColor:"#24899f",color:"white"}} href={"/dashboard/create"}>
         <div >Create New Post
         </div>
       </Link>

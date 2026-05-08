@@ -8,42 +8,43 @@ import {
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
-async function Navbar() {
+async function Navbar() { 
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   return (
     <nav>
-      <div className="flex flex-row justify-between">
-        <div className="flex justify-left items-center py-5">
+      <div className="sm:flex flex-col md:flex-row lg:flex-row flex justify-between">
+        <div className="flex justify-left items-center py-3">
           <Link href={"/"}>
             <div className="flex items-center gap-4">
-              <h1 className="text-3xl font-semibold">
-                Blog<span className=" text-blue-500">Next</span>
+              <h1 className="text-3xl font-semibold text-[#24899f]">
+                DigitalNext
+                {/* <span className=" text-blue-500">Next</span> */}
               </h1>
             </div>
           </Link>
-          <div className="hidden sm:flex items-center gap-6 pl-10 text-xl hover:text-blue-500 transition-colors">
-            <Link href={"/"}>Home</Link>
-          </div>
 
-          <div className="hidden sm:flex items-center gap-6 pl-10 text-xl hover:text-blue-500 transition-colors">
+          <div className="hidden sm:flex items-center gap-6 pl-10 text-xl hover:text-[#24899f] transition-colors">
             <Link href={"/dashboard"}>Dashboard</Link>
           </div>
+          <div className="hidden sm:flex items-center gap-6 pl-10 text-xl hover:text-[#24899f] transition-colors">
+            <Link href={"/about"}>About</Link>
+          </div>
         </div>
-        {user ? (<div className="flex justify-right items-center py-5">
-          <span className="mr-6">Welcome, {user.given_name}</span>
-          <LogoutLink className={`${buttonVariants({ variant: "default" })}`}>
+        {user ? (<div className="lg:flex justify-right items-center py-3 ">
+          <span className="mr-6 text-[#24899f] font-semibold">Welcome, {user.given_name}</span>
+          <LogoutLink className={`${buttonVariants({ variant: "default" })}`} style={{backgroundColor:"#24899f"}}>
             Logout
           </LogoutLink>
         </div>):(
-        <div className="flex justify-right items-center py-5">
+        <div className="flex justify-right items-center py-3">
           <span className="mr-6">
-            <LoginLink className={`${buttonVariants({ variant: "default" })}`}>
+            <LoginLink className={`${buttonVariants({ variant: "default" })}` } style={{backgroundColor:"#24899f",color:"white"}}>
               Login
             </LoginLink>
           </span>
 
-          <RegisterLink className={buttonVariants({ variant: "secondary" })}>
+          <RegisterLink className={buttonVariants({ variant: "secondary" })} style={{color:"#24899f"}}>
             Sign Up
           </RegisterLink>
         </div>)}

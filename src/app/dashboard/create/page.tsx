@@ -12,8 +12,8 @@ function CreateBlog() {
     <div className='p-1'>
       <Card className='max-w-2xl mx-auto mt-10'>
         <CardHeader>
-          <CardTitle>Create Post</CardTitle>
-          <CardDescription>Create a new post to share with the world</CardDescription>
+          <CardTitle className='text-[#24899f] font-bold text-2xl mb-[-10px]'>Create Post</CardTitle>
+          {/* <CardDescription>Create a new post to share with the world</CardDescription> */}
         </CardHeader>
         <CardDescription>
           <form className='p-5 flex flex-col gap-3' action={handleFormSubmit}>

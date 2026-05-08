@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prisma } from "./utils/db";
 import BlogPostCard from "../../components/general/BlogPostCard";
 import { Suspense } from "react";
+import Banner from "../../components/general/Banner";
 
 export const revalidate = 7200; // Disable caching, always fetch fresh data
 
@@ -25,7 +26,10 @@ export async function getData() {
 export default function Home() {
   return (
     <div className="py-4">
-      <div className="text-2xl font-semibold text-emerald-700">
+      <Suspense fallback={<div className="text-center pt-60">Loading...</div>}>
+        <Banner />
+       </Suspense>
+       <div className="text-2xl mt-10 font-semibold text-[#24899f]">
         Latest Posts
       </div>
       <Suspense fallback={<div className="text-center pt-60">Loading...</div>}>
@@ -39,7 +43,7 @@ export default function Home() {
 async function BlogPosts() {
   const data = await getData();
   return (
-    <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+    <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
       {data &&
         data.map((post: any, i) => {
           return <BlogPostCard data={post} key={post.id} />;
